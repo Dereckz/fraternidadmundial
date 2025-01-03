@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/vnd.microsoft.icon" href="../../Img/log.ico" sizes="16x16 32x32">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DENTAL ROJAS | Turnos</title>
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="botonesTurnos.css">
+
+    <link rel="stylesheet" href="../../Css/estilos.css">
+    <link rel="stylesheet" href="../../Css/botones.css">
+    <link rel="stylesheet" href="../../Css/CardPro.css">
+    <link rel="stylesheet" href="../../Css/formTurnos.css">
+    <link rel="stylesheet" href="../../Css/hamburguesa.css">
+    <link rel="stylesheet" href="../../Css/navbarScroll.css">
+    <link rel="stylesheet" href="../../Bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../Css/whats.css">
+    <link rel="stylesheet" href="../../Css/whats2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!----------------------------------------------------->
+</head>
+
+<body style="    background-image: url('../../Img/fondo5.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;">
+    <!--Navbar-->
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light rara sombraB" id="EpicNavbar">
+
+        <a class="navbar-brand d-lg-none" href="#">
+            <img src="../../Img/Logo.png" style="width: 100px; margin-left: 2rem;" alt="Logo Dental Rojas">
+        </a>
+        <!--boton de nav-->
+
+        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar" disabled aria-controls="myNavbarToggler7" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 2.5rem; border: transparent;">
+                <input type="checkbox" id="btn-menu" >
+                <label for="btn-menu" class="lbl-menu" style="margin-right: 2rem; box-shadow: none;" >
+                    <span id="spn1"></span>
+                    <span id="spn2"></span>
+                    <span id="spn3"></span>
+                </label>
+            </button>
+        </div>
+        <!------------------------>
+        <div class="collapse navbar-collapse underlineEffects navbar-nav mx-auto" id="navbar">
+
+            <ul class="navbar-nav mx-auto">
+                <ul>
+                    <li class="nav-item">
+                        <a class="" href="../../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Tratamientos/tratamientos.html">Tratamientos</a>
+                    </li>
+                    <a class="d-none d-lg-block" href="#"><img src="../../Img/Logo.png" style="width: 150px;"></a>
+                    <li class="nav-item">
+                        <a href="turnos.html">Turnos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="../Contacto/contactos.html">Contactos</a>
+                    </li>
+                </ul>
+
+            </ul>
+
+        </div>
+    </nav>
+    <!--BOTON DE WSP-->
+    <div class="nav-bottom">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <div class="popup-whatsapp fadeIn">
+            <div class="content-whatsapp -top"><button type="button" class="closePopup">
+                     <i class="material-icons icon-font-color">close</i>
+                   </button>
+                <div class="container ">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <center><img src="../../Img/Persona.png" width="50"></center>
+                        </div>
+                        <div class="col-md-9" style="margin-left: 10px;">
+                            <p> Hola, ¿en que podemos ayudarte? </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-whatsapp -bottom">
+                <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+
+                <button class="send-msPopup" id="send-btn" type="button">
+                       <i class="fa fa-send" style="margin-left: -4px;"></i>
+                   </button>
+            </div>
+        </div>
+        <button type="button" id="whats-openPopup" class="whatsapp-button">
+               <div class="float" >
+ <i class="fa fa-whatsapp my-float"></i></div>
+           </button>
+        <div class="circle-anime"></div>
+    </div>
+
+    <!--FIN DE BOTON WSP-->
+
+
+    <!-- Banner Image  -->
+
+    <div class="fondoTurnos">
+        <div class="cardTurno">
+
+            <div class="nav divBotones" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <button class="botonTurnos " id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="false" data-aos="fade-right" data-aos-delay="500" data-aos-duration="1000"><i class="bi bi-envelope-open" ></i> Email </button>
+                <button class="botonTurnos active" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="true" data-aos="fade-right" data-aos-delay="700" data-aos-duration="1000"><i class="bi bi-whatsapp" ></i> WhatsApp</button>
+                <button class="botonTurnos" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false" data-aos="fade-right" data-aos-delay="900" data-aos-duration="1000"><i class="bi bi-telephone-outbound" ></i> Emergencias</button>
+            </div>
+            <div class="tab-content divContenido" id="v-pills-tabContent" data-aos="fade-up" data-aos-duration="1000">
+                <!--CORREO-->
+                <div class="tab-pane fade  text-center" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+                    <h3>Turnos por Email</h3>
+                    <div class="container">
+                        <div class="row d-flex justify-content-center align-content-center">
+                            <div class="col-md-8 ">
+
+
+
+                                <form class="row g-3 formulario">
+
+                                    <div class="col-4">
+                                        <label for="validationDefault01" class="form-label">Nombre/s</label>
+                                        <input type="text" class="form-control" id="validationDefault01" placeholder="Nombre" required>
+                                    </div>
+                                    <div class="col-4">
+                                        <label for="validationDefault02" class="form-label">Apellido/s</label>
+                                        <input type="text" class="form-control" id="validationDefault02" placeholder="Apellido" required>
+                                    </div>
+                                    <div class="col-3">
+                                        <label for="validationDefaultUsername" class="form-label">DNI</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="DNI" required>
+                                    </div>
+
+                                    <div class="col-5">
+                                        <label for="validationDefaultUsername" class="form-label">Telefono</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="+54 9 11 6587-9270" required>
+                                    </div>
+                                    <div class="col-5">
+                                        <label for="validationDefaultUsername" class="form-label">Correo</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="dentalrojasrojas@gmail.com" required>
+                                    </div>
+
+                                    <div class="col-4">
+                                        <label for="validationDefaultUsername" class="form-label">Asunto</label>
+                                        <input type="text" class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="Consulta de Tratamiento" required>
+                                    </div>
+
+
+                                    <div class="col-md-12">
+                                        <label for="validationDefaultUsername" class="form-label">Mensaje</label>
+
+                                        <textarea class="form-control" id="validationDefaultUsername" aria-describedby="inputGroupPrepend2" placeholder="Mensaje..." id="floatingTextarea2" style="height: 100px" placeholder="Mensaje"></textarea>
+
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="botonTurnoAnimado" type="submit">Enviar <i class="bi bi-envelope"></i><i class="bi bi-arrow-right"></i></button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--FIN DE CORREO-->
+                <!--WHATS-->
+                <div class="tab-pane fade show active text-center" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="container">
+                        <div class="row">
+                            <!--IZQUIERDA-->
+                            <div class="col-md-6 " style="margin: auto;">
+                                <h2>Pedi tu turno!</h2>
+                                <p style="font-size: 1.3rem;">En Dental Rojas atendemos desde urgencias en el día hasta lo último en procedimientos dentales quirúrgicos y estéticos.
+                                </p>
+                                <p style="font-size: 1.2rem;">Escanea el codigo QR para hablar con nosotros ¡Te esperamos!</p>
+
+                                <div class="d-flex justify-content-center">
+                                    <a class="botonTurnoAnimado" href="https://api.whatsapp.com/send?phone=5491165879270" target="_blank" role="button"> <i class="bi bi-whatsapp"></i> Abrir WhatsApp</a>
+                                </div>
+                                <p style="font-size: 1.2rem; margin-top: -25px;">
+                                    </i> +54 9 11 6587-9270 </p>
+                            </div>
+                            <!--FIN DE IZQUIERDA-->
+                            <!--DERECHA-->
+                            <div class="col-md-6 " style="margin: auto;">
+                                <img src="../../Img/QR.jpg" alt="QR ROJAS DENTRAL ROJAS DENTISTA" class="QRimg">
+                            </div>
+                            <!--FIN DERECHA-->
+                        </div>
+
+                    </div>
+                </div>
+                <!--FIN DE WHATS-->
+                <!--EMERGENCIAS-->
+                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="container">
+                        <div class="row">
+                            <!--IZQUIERDA-->
+                            <div class="col-md-6 ">
+                                <h2>Atiendete con nosotros!</h2>
+                                <p style="font-size: 1.3rem;">Si tenes una urgencia te atendemos en el acto.
+                                </p>
+                                <p style="font-size: 1.2rem;">Abierto de Lunes a Viernes de 10 a 20hs y Sabados de 16 a 19hs</p>
+
+                                <div class="datosEmerg">
+                                    <p><i class="bi bi-telephone-outbound"></i> 4901-5451</p>
+                                    <p><i class="bi bi-whatsapp"></i> +54 9 11 6587-9270 </p>
+                                    <p><i class="bi bi-building"></i> Rojas 68, CABA</p>
+                                </div>
+
+                                <a class="botonTurnoAnimado text-center" href="https://api.whatsapp.com/send?phone=5491165879270" target="_blank" role="button"> <i class="bi bi-whatsapp"></i> Abrir WhatsApp</a>
+
+                            </div>
+                            <!--FIN DE IZQUIERDA-->
+                            <!--DERECHA-->
+                            <div class="col-md-6 " style="margin: auto;">
+                                <iframe class="mapaTurnos" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.38934045774!2d-58.44449062417734!3d-34.61960015833743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcca3f3464220d%3A0x52cd0a4e55e75b76!2sDental%20Rojas!5e0!3m2!1ses!2sar!4v1668282122277!5m2!1ses!2sar"
+                                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                            <!--FIN DERECHA-->
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--FIN EMERGENCIAS-->
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white corteFooter">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section -->
+            <section>
+                <!--Grid row-->
+                <div class="row">
+                    <!-- LOGO column -->
+                    <div class="col-md-3 col-lg-3 col-xl-3 col-xxl-3 mx-auto mb-5 imagenLogoFooter">
+                        <img src="../../Img/Logo.webp" style="width: 275px;" alt="Logo Dental Rojas">
+                    </div>
+
+                    <!-- LINEA-->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- TRATAMINETOS column -->
+                    <div class="col-md-4 col-lg-2 col-xl-2 col-xxl-2">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Tratamientos</h6>
+                        <p>
+                            <a class="text-white">Ortodoncia</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Implantes</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Cirugias</a>
+                        </p>
+                        <p>
+                            <a class="text-white">Y más</a>
+                        </p>
+                    </div>
+                    <!-- LINEA -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- LINEA -->
+                    <hr class="w-100 clearfix d-md-none" />
+
+                    <!-- CONTACTOS column -->
+                    <div class="col-md-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold">Contactos</h6>
+                        <p><i class="bi bi-building"></i> Rojas 68, CABA</p>
+                        <p><i class="bi bi-envelope-open"></i> dentalrojasrojas@gmail.com</p>
+                        <p><i class="bi bi-telephone-outbound"></i> 4901-5451</p>
+                        <p><i class="bi bi-telephone-outbound"></i> +54 9 11 6587-9270</p>
+                    </div>
+
+                    <!-- REDES SOCIALES column -->
+                    <div class="col-md-12 col-lg-2 col-xxl-3 ">
+                        <center>
+                            <h6 class="text-uppercase font-weight-bold">¡Seguinos!</h6>
+                            <div class="col-lg ">
+                                <!-- Facebook -->
+                                <a class="btn btn-primary btn-floating m-1" style="background-color: #3b5998 ; border-radius: 50%;" href="https://www.facebook.com/Dental-Rojas-1267116686648553/" target="_blank" role="button"><i class="bi bi-facebook"></i></a>
+                                <!-- Instagram -->
+                                <a class="btn btn-primary btn-floating m-1" style="background-color: #b83fb8; border-radius: 50%;" href="https://www.instagram.com/dentalrojas/" target="_blank" role="button"><i class="bi bi-instagram"></i></a>
+                                <!-- Wsp -->
+                                <a class="btn btn-primary btn-floating m-1" style="background-color: #2fca00  ; border-radius: 50%;" href="https://api.whatsapp.com/send?phone=5491165879270" target="_blank" role="button"><i class="bi bi-whatsapp"></i></a>
+                            </div>
+                        </center>
+                    </div>
+                </div>
+                <!--Grid row-->
+            </section>
+            <!-- Section: Links -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
+            © 2021 Copyright:
+            <a class="text-white" href="https://mdbootstrap.com/">Brian.sfarfan@gmail.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!--FIN FOOTER-->
+</body>
+<!-- JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+<script src="https://kit.fontawesome.com/eb496ab1a0.js" crossorigin="anonymous"></script>
+
+<script src="../../Js/script2.js"></script>
+<!--<script src="Js/navbar.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+<script src="../../Bootstrap/js/bootstrap.min.js"></script>
+<!----------------------------------------------------->
+
+</html>
+<!--FIN DE HTML-->
+
+<!--JS-->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
