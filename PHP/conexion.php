@@ -1,8 +1,8 @@
 <?php
     $nombreServidor ="localhost";
-    $db = "base_rojas";
+    $db = "bdfraternidadmundial";
     $usuario = "root";
-    $contraseña = "";
+    $contraseña = "@rupe2021";
 
     try {
         $conexion = new PDO("mysql:host=$nombreServidor;dbname=$db", $usuario,$contraseña);
