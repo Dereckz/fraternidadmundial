@@ -1,18 +1,14 @@
 <?php
-    $nombreServidor ="localhost";
-    $db = "bdfraternidadmundial";
-    $usuario = "root";
-    $contraseña = "@rupe2021";
+  
 
-    try {
-        $conexion = new PDO("mysql:host=$nombreServidor;dbname=$db", $usuario,$contraseña);
-        $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$dbhost = "localhost";
+$dbuser = "root";
+$dbpass = "@rupe2021";
+$dbname = "bdfraternidadmundial"; 
 
-        echo "conexion exitosa";
-        return $conexion;
-
-    }catch (PDOException $e ){
-        echo "Error en la conexion: " .$e->getMessage();
-        echo "Linea: ".$e->getLine();
+    $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+    if (!$conn) 
+    {
+        die("No hay conexión: ".mysqli_connect_error());
     }
 ?>
