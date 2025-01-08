@@ -6,7 +6,8 @@ body {
 }
 
 .banner-image1 {
-    background-image: linear-gradient(to top, rgba(12, 52, 131, 0.507) 0%, rgba(102, 153, 255, 0.507) 100%, rgb(107, 140, 206, 0.507) 100%, rgb(162, 182, 223, 0.507) 100%), url('../Img/fondo5.jpg');
+    /*background-image: linear-gradient(to top, rgba(12, 52, 131, 0.507) 0%, rgba(102, 153, 255, 0.507) 100%, rgb(107, 140, 206, 0.507) 100%, rgb(162, 182, 223, 0.507) 100%), url('../Img/fondo5.jpg');*/
+    background-image:url('../Img/frater.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -59,7 +60,8 @@ body {
 
 .sombraB {
     box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.288);
-    background-image: linear-gradient(-225deg, rgb(98, 91, 235) 0%, rgb(29, 143, 225) 48%, rgb(34, 225, 255) 100%);
+    background-image: linear-gradient(-225deg, rgb(235 192 91) 0%, rgb(225 183 29) 48%, rgb(255 118 34) 100%);
+    /*background-image: linear-gradient(-225deg, rgb(98, 91, 235) 0%, rgb(29, 143, 225) 48%, rgb(34, 225, 255) 100%);*/
 }
 
 .sombraB3 {
