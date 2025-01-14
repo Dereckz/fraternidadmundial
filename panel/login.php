@@ -20,8 +20,20 @@ if ($stmt->num_rows > 0) {
     // se confirma que la cuenta existe ahora validamos la contraseña
 
     if ($_POST['password'] === $cPassword) {
+
+        $query="SELECT * FROM usuarios where cUsuario='$nombre' and iEstatus=1";
+        $result=$conn->query($query);
+        $row=$result->fetch_assoc();
+        if($result->num_rows>0){
+
+            $_SESSION["usuario"] = $fila["cUsuario"];
+            $_SESSION["Nombre"]=$row['cNombre'];
+            $_SESSION["NombreLargo"]=$row["cnombrelargo"];
+            header("Location:../panel/panel.html");
+        }
+
         echo "Login motherfucker";
-       // session_regenerate_id();
+        
         /*$_SESSION["id"] =$fila["idUsuario"];
            $_SESSION["usuario"] = $fila["cUsuario"];
             $_SESSION["Tipo"]=$fila["fkidTipoUsuario"];
@@ -35,56 +47,14 @@ if ($stmt->num_rows > 0) {
            $_SESSION[ 'last_activity' ]= time();
           
            $tipo=$fila['fkidTipoUsuario']; */
+    }else
+    {
+        header('Location: index.html');
     }
 }else {
 
     // usuario incorrecto
     header('Location: index.html');
 }
-$stmt->close();
-
-// try{
-//     if ($stmt = $conn->prepare("SELECT iIdUsuario, cUsuario, cPassword, cNombre, cApellidoP, cnombrelargo, fkidTipoUsuario,iGenero, cProfile FROM usuarios WHERE cUsuario= ? LIMIT 1")) {
-
-//         $stmt->bind_Param("s", $nombre);
-//         $stmt->execute();
-//         $result = $stmt->get_result();
-//         $fila = $result->fetch_assoc();
-//         if ($pass =$fila['cPassword']) {
-   
-//             echo 'entro';
-//          /*   $_SESSION["id"] =$fila["iIdUsuario"];
-//            $_SESSION["usuario"] = $fila["cUsuario"];
-//            $_SESSION["Tipo"]=$fila["fkidTipoUsuario"];
-//            $_SESSION["Nombre"]=$fila['cNombre'];
-//            $_SESSION["ApellidoP"]=$fila['cApellidoP'];
-//            $_SESSION["NombreLargo"]=$fila["cnombrelargo"];
-//            $_SESSION["iGenero"]=$fila["iGenero"];
-//            $_SESSION["img"]=$fila["cProfile"];
-//            $_SESSION['tiempo']=time();
-//            $_SESSION['acceso']=$fechaActual;
-//            $_SESSION[ 'last_activity' ]= time();
-          
-//            $tipo=$fila['fkidTipoUsuario']; */
-           
-           
-         
-//         } else {
-//           //header("Location: login.html");
-//           echo 'La contraseña no es válida!' ;
-//           //echo "<script> alert('La contraseña no es válida!');window.location= '../account/login.html' </script>";
-            
-             
-//         }
-   
-//     } else {
-//         echo "<script> alert('Error al logarse');window.location= '../index.html' </script>";
-//        //header("Location:  ../index.html");
-//     }
-// }catch (Exception $e) {
-//     //echo 'Excepción capturada: ',  $e->getMessage(), "\n";
-//     header("Location: 404.html");
-// }
-
-
+//$stmt->close();
 
