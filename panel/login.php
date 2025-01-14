@@ -29,10 +29,9 @@ if ($stmt->num_rows > 0) {
             $_SESSION["usuario"] = $fila["cUsuario"];
             $_SESSION["Nombre"]=$row['cNombre'];
             $_SESSION["NombreLargo"]=$row["cnombrelargo"];
-            header("Location:../panel/panel.html");
+            header("Location:../panel/dashboard.html");
         }
 
-        echo "Login motherfucker";
         
         /*$_SESSION["id"] =$fila["idUsuario"];
            $_SESSION["usuario"] = $fila["cUsuario"];
