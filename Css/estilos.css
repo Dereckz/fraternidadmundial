@@ -13,7 +13,7 @@ body {
 }
 
 .banner-image2 {
-    background-image: linear-gradient(to top, rgba(12, 52, 131, 0.507) 0%, rgb(162, 182, 223, 0.507) 100%, rgb(107, 140, 206, 0.507) 100%, rgb(162, 182, 223, 0.507) 100%), url('../Img/fondo2.jpg');
+    background-image: linear-gradient(to top, rgb(247 228 77 / 51%) 0%, rgb(225 208 145 / 51%) 100%, rgb(206 172 107 / 51%) 100%, rgb(162, 182, 223, 0.507) 100%), url('../Img/frater.jpg');
     background-size: cover;
     background-attachment: fixed;
 }
