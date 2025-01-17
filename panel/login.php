@@ -29,7 +29,7 @@ if ($stmt->num_rows > 0) {
             $_SESSION["usuario"] = $fila["cUsuario"];
             $_SESSION["Nombre"]=$row['cNombre'];
             $_SESSION["NombreLargo"]=$row["cnombrelargo"];
-            header("Location:../panel/dashboard.html");
+            header("Location:../panel/index.php");
         }
 
         
