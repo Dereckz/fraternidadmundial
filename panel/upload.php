@@ -44,6 +44,7 @@
           <span>Subir Articulo</span></a>
       </li>
       
+      
       <hr class="sidebar-divider">
       <div class="version" id="version-ruangadmin"></div>
     </ul>
@@ -76,55 +77,10 @@
                 </form>
               </div>
             </li>
-         
-               </li>
+      
+          </li>
 
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
-                <i class="fas fa-tasks fa-fw"></i>
-                <span class="badge badge-success badge-counter">3</span>
-              </a>
-              <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                aria-labelledby="messagesDropdown">
-                <h6 class="dropdown-header">
-                  Task
-                </h6>
-                <a class="dropdown-item align-items-center" href="#">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Design Button
-                      <div class="small float-right"><b>50%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-success" role="progressbar" style="width: 50%" aria-valuenow="50"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </a>
-                <a class="dropdown-item align-items-center" href="#">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Make Beautiful Transitions
-                      <div class="small float-right"><b>30%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-warning" role="progressbar" style="width: 30%" aria-valuenow="30"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </a>
-                <a class="dropdown-item align-items-center" href="#">
-                  <div class="mb-3">
-                    <div class="small text-gray-500">Create Pie Chart
-                      <div class="small float-right"><b>75%</b></div>
-                    </div>
-                    <div class="progress" style="height: 12px;">
-                      <div class="progress-bar bg-danger" role="progressbar" style="width: 75%" aria-valuenow="75"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </a>
-                <a class="dropdown-item text-center small text-gray-500" href="#">View All Taks</a>
-              </div>
-            </li> -->
+              
             <div class="topbar-divider d-none d-sm-block"></div>
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
@@ -158,120 +114,63 @@
         <!-- Container Fluid-->
         <div class="container-fluid" id="container-wrapper">
           <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Listado</h1>
+            <h1 class="h3 mb-0 text-gray-800">Subir Archivo</h1>
             <ol class="breadcrumb">
               <li class="breadcrumb-item"><a href="./">Home</a></li>
-              <li class="breadcrumb-item">Listado</li>
+              <li class="breadcrumb-item">Subir</li>
               <li class="breadcrumb-item active" aria-current="page">Articulo</li>
             </ol>
           </div>
-            <?php
-                  $sqlArticulo  = ("SELECT * FROM articulo 
-                                  where iEstatus=1; ");
-                  $queryArticulo = mysqli_query($conn, $sqlArticulo);
-                  $cantidad     = mysqli_num_rows($queryArticulo);
-                  $articulosonline= array();
-            ?>
+         
+             
           <!-- Row -->
           <div class="row">
             <!-- Datatables -->
             <div class="col-lg-12">
-              <div class="card mb-4">
+  <!-- Form Basic -->
+  <div class="card mb-4">
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Articulo</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Form Basic</h6>
                 </div>
-                <div class="table-responsive p-3">
-                  <table class="table align-items-center table-flush" id="dataTable">
-                    <thead class="thead-light">
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Fecha</th>
-                        <th>Descripción</th>
-                        <th>Categoria</th>
-                        <th>Imagen</th>
-                        <th>Estatus</th>
-                      </tr>
-                    </thead>
-                    <tfoot>
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Fecha</th>
-                        <th>Descripción</th>
-                        <th>Categoria</th>
-                        <th>Imagen</th>
-                        <th>Estatus</th>
-                      </tr>
-                    </tfoot>
-                    <tbody>
-                    <?php
-                     while ($dataArticulo = mysqli_fetch_array($queryArticulo)) { ?>
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Nombre Artículo</label>
+                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        placeholder="Teclea el nombre">
                      
-                     <tr>
-                          
-                          <td><?php echo strtoupper($dataArticulo['Nombre']); ?></td>
+                    </div>
+                    <input type="file" id="file-uploader" multiple />
+                    <div class="form-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Elija el artículo.</label>
+                      </div>
+                    </div>
 
-                          <td><?php echo $dataArticulo['Fecha']; ?></td>
-                          <?php if($dataArticulo['iEstatus']==1) {?> 
-                            <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['iIdUsuario']; ?>'&status=1">Activo<a></span></td> 
-                          <?php }?> 
-                          <?php if($dataArticulo['iEstatus']==0) {?> 
-                            <td><span  class="badge badge-danger"><a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['iIdUsuario']; ?>'&status=0">Inactivo</a></span></td> 
-                          <?php }?>
-                         <td>
-                         <?php if ($dataArticulo['idempresa']==0){
-                              echo "N/A"; 
-                         } else{
-                          echo $dataArticulo['nombre']; 
-                         }
-                         ?>
-                         </td>  
-                          <td>
-                          <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataArticulo['iIdUsuario']; ?>">
-                              Eliminar
-                            </button>  -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataArticulo['iIdUsuario']; ?>">
-                              Modificar
-                            </button> 
-                            <button type="button" class="btn btn-warning" data-toggle="modal"  data-target="#cursomodal<?php echo $dataArticulo['iIdUsuario']; ?>">
-                              Agregar Curso
-                            </button> 
-                            
-                     </td> 
-                      <?php 
-                      
-                          $sqlacceso   = ("SELECT * FROM accesos where idUsuario=".$dataCliente['iIdUsuario']." ORDER BY dFechaAcceso DESC LIMIT 1;");
-                          $queryacceso = mysqli_query($conn, $sqlacceso);
-                          $rowsa=mysqli_num_rows($queryacceso);
-
-                          if($rowsa>0){
-                            while ($dataacceso = mysqli_fetch_array($queryacceso)) {
-                              $fechaInicio = new DateTime($dataacceso['dFechaAcceso']);
-                              $fechaFin = new DateTime($dataacceso['dFechaCierre']);
-                              $intervalo = $fechaInicio->diff($fechaFin);  
-                              $tiempodecoenxion=$intervalo->h . " horas, " . $intervalo->i . " minutos y " . $intervalo->s . " segundos";                                       
-                            ?>
-                            <td><?php echo $tiempodecoenxion ;?></td>
-                            <td><?php echo $dataacceso['dFechaAcceso']; ?></td>
-                            <td hidden>3</td>
-                         <?php }   
-                        }else{?>
-                            <td>0</td>
-                            <td>0000-00-00</td>
-                            <td hidden>3</td>
-                        <?php } ?>
-                         
-                        </tr>
-                            <?php include('ModalAgregar.php'); ?>
-                            <!--Ventana Modal para Actualizar--->
-                            <?php include('ModalEditar.php'); ?>
-                            <!--Ventana Modal para la Alerta de Eliminar--->
-                            <?php include('ModalEliminar.php'); ?>
-                            <!--Ventana Modal para Agregar Curso--->
-                            <?php include('ModalCurso.php'); ?>
-              <?php  }?>
-
-                    </tbody>
-                  </table>
+                    <div class="form-group" id="simple-date1">
+                    <label for="simpleDataInput">Simple Data Input</label>
+                      <div class="input-group date">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                        </div>
+                        <input type="text" class="form-control" value="01/06/2020" id="simpleDataInput">
+                      </div>
+                  </div>
+                  
+                  <div class="form-group">
+                      <label for="exampleFormControlTextarea1">Descripción</label>
+                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <div class="custom-file">
+                        <input type="file" class="custom-file-input" id="customFile">
+                        <label class="custom-file-label" for="customFile">Agregar Imagen</label>
+                      </div>
+                    </div>
+                 
+                    <button type="submit" class="btn btn-primary">Subir Archivo</button>
+                  </form>
                 </div>
               </div>
             </div>
@@ -337,6 +236,7 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
   <script src="js/ruang-admin.min.js"></script>
+
   <!-- Page level plugins -->
   <script src="vendor/datatables/jquery.dataTables.min.js"></script>
   <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
