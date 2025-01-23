@@ -79,7 +79,7 @@
          
                </li>
 
-              <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
+          <!--   <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">
                 <i class="fas fa-tasks fa-fw"></i>
                 <span class="badge badge-success badge-counter">3</span>
