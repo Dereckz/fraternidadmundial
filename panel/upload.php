@@ -146,7 +146,7 @@
                       </div>
                       <div class="card-body">
                       <form action="subir.php" name="fsub" id="fsub"method="post" enctype="multipart/form-data">
-                     
+                      <input type="text" name="destinatario" value="<?php echo  $_SESSION["id"] ?>">
                       <input type="text" name="destinatario" value="<?php echo  $_SESSION["usuario"] ?>">
                       <div class="form-group">
                             <label for="exampleInputEmail1">Nombre Artículo</label>

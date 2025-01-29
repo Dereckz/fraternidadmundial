@@ -190,6 +190,7 @@
                         <th>Categoria</th>
                         <th>Imagen</th>
                         <th>Estatus</th>
+                        <th>Acciones</th>
                       </tr>
                     </thead>
                     <tfoot>
@@ -200,47 +201,47 @@
                         <th>Categoria</th>
                         <th>Imagen</th>
                         <th>Estatus</th>
+                        <th>Acciones</th>
                       </tr>
                     </tfoot>
                     <tbody>
-                    <?php
-                     while ($dataArticulo = mysqli_fetch_array($queryArticulo)) { ?>
-                     
+                        <?php
+                        while ($dataArticulo = mysqli_fetch_array($queryArticulo)) { ?>
+                        
                      <tr>
                           
-                          <td><?php echo strtoupper($dataArticulo['Nombre']); ?></td>
+                            <td><?php echo strtoupper($dataArticulo['Nombre']); ?></td>
 
-                          <td><?php echo $dataArticulo['Fecha']; ?></td>
-                          <td><?php echo $dataArticulo['Descripcion']; ?></td>
-                          <td><?php echo $dataArticulo['Imagen']; ?></td>
-                          <td><?php echo $dataArticulo['usuario']; ?></td>
-                          <?php if($dataArticulo['iEstatus']==1) {?> 
-                            <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=1">Activo<a></span></td> 
-                          <?php }?> 
-                          <?php if($dataArticulo['iEstatus']==0) {?> 
-                            <td><span  class="badge badge-danger"><a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=0">Inactivo</a></span></td> 
-                          <?php }?>
-                          <td>
-                          <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataArticulo['idArticulo']; ?>">
-                              Eliminar
-                            </button>  -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataArticulo['idArticulo']; ?>">
-                              Modificar
-                            </button> 
-                            <button type="button" class="btn btn-warning" data-toggle="modal"  data-target="#cursomodal<?php echo $dataArticulo['idArticulo']; ?>">
-                              Agregar Curso
-                            </button> 
-                            
-                     </td> 
-                     
+                            <td><?php echo $dataArticulo['Fecha']; ?></td>
+                            <td><?php echo $dataArticulo['Descripcion']; ?></td>
+                            <td><?php echo $dataArticulo['Imagen']; ?></td>
+                            <td><?php echo $dataArticulo['usuario']; ?></td>
+                            <?php if($dataArticulo['iEstatus']==1) {?> 
+                              <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=1">Activo<a></span></td> 
+                            <?php }?> 
+                            <?php if($dataArticulo['iEstatus']==0) {?> 
+                              <td><span  class="badge badge-danger"><a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=0">Inactivo</a></span></td> 
+                            <?php }?>
+                            <td>
+                              <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataArticulo['idArticulo']; ?>">
+                                  Eliminar
+                                </button>  -->
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataArticulo['idArticulo']; ?>">
+                                  Modificar
+                                </button> 
+                                <button type="button" class="btn btn-warning" data-toggle="modal"  data-target="#cursomodal<?php echo $dataArticulo['idArticulo']; ?>">
+                                  Agregar Curso
+                                </button> 
+                              
+                          </td> 
                         </tr>
-                            <?php include('ModalAgregar.php'); ?>
+                            <?php //include('ModalAgregar.php'); ?>
                             <!--Ventana Modal para Actualizar--->
-                            <?php include('ModalEditar.php'); ?>
+                            <?php //include('ModalEditar.php'); ?>
                             <!--Ventana Modal para la Alerta de Eliminar--->
-                            <?php include('ModalEliminar.php'); ?>
+                            <?php //include('ModalEliminar.php'); ?>
                             <!--Ventana Modal para Agregar Curso--->
-                            <?php include('ModalCurso.php'); ?>
+                            <?php //include('ModalCurso.php'); ?>
               <?php  }?>
 
                     </tbody>
