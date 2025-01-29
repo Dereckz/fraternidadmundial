@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     
-<?php session_start() ?>
-<?php 
 
+<?php 
+  session_start();
   require("../php/conexion.php");
 
 ?>
@@ -109,8 +109,8 @@
                   Ajustes
                 </a>
                 <!-- <a class="dropdown-item" href="#">
-                  <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                  Activity Log
+                      <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+                      Activity Log
                 </a> -->
                 <div class="dropdown-divider"></div>
                 <a class="dropdown-item" href="javascript:void(0);" data-toggle="modal" data-target="#logoutModal">
@@ -137,53 +137,58 @@
           <!-- Row -->
           <div class="row">
             <!-- Datatables -->
-            <div class="col-lg-12">
-      <!-- Form Basic -->
-      <div class="card mb-4">
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Form Basic</h6>
-                </div>
-                <div class="card-body">
-                  <form>
-                    <div class="form-group">
-                      <label for="exampleInputEmail1">Nombre Artículo</label>
-                      <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                        placeholder="Teclea el nombre">
+              <div class="col-lg-12">
+                  <!-- Form Basic -->
+                <!--   <form action="subir.php" name="fsub" id="fsub"method="post" enctype="multipart/form-data"> -->
+                    <div class="card mb-4">
+                      <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+                        <h6 class="m-0 font-weight-bold text-primary">Form Basic</h6>
+                      </div>
+                      <div class="card-body">
+                      <form action="subir.php" name="fsub" id="fsub"method="post" enctype="multipart/form-data">
                      
-                    </div>
-                    <input type="file" id="file-uploader" multiple />
-                    <div class="form-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Elija el artículo.</label>
+                      <input type="text" name="destinatario" value="<?php echo  $_SESSION["usuario"] ?>">
+                      <div class="form-group">
+                            <label for="exampleInputEmail1">Nombre Artículo</label>
+                            <input type="text" class="form-control" id="namearticulo" name="namearticulo" aria-describedby="emailHelp"
+                              placeholder="Teclea el nombre">
+                          
+                          </div>
+                        <!--  <input type="file" id="file-uploader" multiple /> -->
+                          <div class="form-group">
+                          <label for="simpleDataInput">Seleccione su Archivo</label>
+                            <div class="custom-file">
+                              <input type="file" class="custom-file-input" id="patharticulo" name="patharticulo"  accept="application/pdf" name="customFile">
+                              <label class="custom-file-label" for="lblpatharticulo" name="lblpatharticulo">Agregar Artículo</label>
+                            </div>
+                          </div>
+                          <div class="form-group" id="simple-date1">
+                          <label for="simpleDataInput">Fecha de artículo</label>
+                            <div class="input-group date">
+                              <div class="input-group-prepend">
+                                <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                              </div>
+                              <input type="text" class="form-control" value="<?php echo date("d/m/Y");?>" id="simpleDataInput" name="simpleDataInput">
+                            </div>
+                          </div>
+                        
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Descripción</label>
+                            <textarea class="form-control" id="txtDescripcion" name="txtDescripcion"rows="3"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <div class="custom-file">
+                              <input type="file" accept="image/*" class="custom-file-input" id="pathImagenFile" name="pathImagenFile">
+                              <label class="custom-file-label" for="customFile" id="lblpathImagenFile" name="lblpathImagenFile">Agregar Imagen</label>
+                            </div>
+                          </div>
+                      
+                          <button type="submit" class="btn btn-primary">Subir Archivo</button>
+                        </form>
                       </div>
                     </div>
-                    <div class="form-group" id="simple-date1">
-                    <label for="simpleDataInput">Fecha de artículo</label>
-                      <div class="input-group date">
-                        <div class="input-group-prepend">
-                          <span class="input-group-text"><i class="fas fa-calendar"></i></span>
-                        </div>
-                        <input type="text" class="form-control" value="<?php echo date("d/m/Y");?>" id="simpleDataInput">
-                      </div>
-                  </div>
-                  
-                  <div class="form-group">
-                      <label for="exampleFormControlTextarea1">Descripción</label>
-                      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <div class="custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Agregar Imagen</label>
-                      </div>
-                    </div>
-                 
-                    <button type="submit" class="btn btn-primary">Subir Archivo</button>
-                  </form>
-                </div>
+                 <!--  </form> -->
               </div>
-            </div>
            
           </div>
           <!--Row-->
@@ -264,6 +269,19 @@
   <!-- Javascript for this page -->
   
  <script>
+  
+    $('input[name="patharticulo"]').change(function(){
+      var fileName = $(this).val();
+      
+        $('label[name="lblpatharticulo"]').html(fileName); 
+    });
+
+    $('input[name="pathImagenFile"]').change(function(){
+      var fileName2 = $(this).val();
+      
+        $('label[name="lblpathImagenFile"]').html(fileName2); 
+    });
+
 
     $(document).ready(function () {
         $('#dataTable').DataTable(); // ID From dataTable 

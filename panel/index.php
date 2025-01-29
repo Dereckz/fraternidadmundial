@@ -211,55 +211,28 @@
                           <td><?php echo strtoupper($dataArticulo['Nombre']); ?></td>
 
                           <td><?php echo $dataArticulo['Fecha']; ?></td>
+                          <td><?php echo $dataArticulo['Descripcion']; ?></td>
+                          <td><?php echo $dataArticulo['Imagen']; ?></td>
+                          <td><?php echo $dataArticulo['usuario']; ?></td>
                           <?php if($dataArticulo['iEstatus']==1) {?> 
-                            <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['iIdUsuario']; ?>'&status=1">Activo<a></span></td> 
+                            <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=1">Activo<a></span></td> 
                           <?php }?> 
                           <?php if($dataArticulo['iEstatus']==0) {?> 
-                            <td><span  class="badge badge-danger"><a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['iIdUsuario']; ?>'&status=0">Inactivo</a></span></td> 
+                            <td><span  class="badge badge-danger"><a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=0">Inactivo</a></span></td> 
                           <?php }?>
-                         <td>
-                         <?php if ($dataArticulo['idempresa']==0){
-                              echo "N/A"; 
-                         } else{
-                          echo $dataArticulo['nombre']; 
-                         }
-                         ?>
-                         </td>  
                           <td>
-                          <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataArticulo['iIdUsuario']; ?>">
+                          <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataArticulo['idArticulo']; ?>">
                               Eliminar
                             </button>  -->
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataArticulo['iIdUsuario']; ?>">
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataArticulo['idArticulo']; ?>">
                               Modificar
                             </button> 
-                            <button type="button" class="btn btn-warning" data-toggle="modal"  data-target="#cursomodal<?php echo $dataArticulo['iIdUsuario']; ?>">
+                            <button type="button" class="btn btn-warning" data-toggle="modal"  data-target="#cursomodal<?php echo $dataArticulo['idArticulo']; ?>">
                               Agregar Curso
                             </button> 
                             
                      </td> 
-                      <?php 
-                      
-                          $sqlacceso   = ("SELECT * FROM accesos where idUsuario=".$dataCliente['iIdUsuario']." ORDER BY dFechaAcceso DESC LIMIT 1;");
-                          $queryacceso = mysqli_query($conn, $sqlacceso);
-                          $rowsa=mysqli_num_rows($queryacceso);
-
-                          if($rowsa>0){
-                            while ($dataacceso = mysqli_fetch_array($queryacceso)) {
-                              $fechaInicio = new DateTime($dataacceso['dFechaAcceso']);
-                              $fechaFin = new DateTime($dataacceso['dFechaCierre']);
-                              $intervalo = $fechaInicio->diff($fechaFin);  
-                              $tiempodecoenxion=$intervalo->h . " horas, " . $intervalo->i . " minutos y " . $intervalo->s . " segundos";                                       
-                            ?>
-                            <td><?php echo $tiempodecoenxion ;?></td>
-                            <td><?php echo $dataacceso['dFechaAcceso']; ?></td>
-                            <td hidden>3</td>
-                         <?php }   
-                        }else{?>
-                            <td>0</td>
-                            <td>0000-00-00</td>
-                            <td hidden>3</td>
-                        <?php } ?>
-                         
+                     
                         </tr>
                             <?php include('ModalAgregar.php'); ?>
                             <!--Ventana Modal para Actualizar--->

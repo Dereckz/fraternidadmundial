@@ -1,6 +1,6 @@
 <?php
 
- 
+session_start();
 require("../PHP/conexion.php");
 $nombre =$_POST["username"];
 $pass = $_POST["password"];
@@ -25,10 +25,11 @@ if ($stmt->num_rows > 0) {
         $result=$conn->query($query);
         $row=$result->fetch_assoc();
         if($result->num_rows>0){
-
-            $_SESSION["usuario"] = $fila["cUsuario"];
+            $_SESSION["id"]=$row["idUsuario"];
+            $_SESSION["usuario"] = $row["cUsuario"];
             $_SESSION["Nombre"]=$row['cNombre'];
             $_SESSION["NombreLargo"]=$row["cnombrelargo"];
+
             header("Location:../panel/index.php");
         }
 
