@@ -7,7 +7,7 @@
 
 .cardPro .cara.cara1{
     position: relative;
-    background: linear-gradient(-225deg, rgb(34, 225, 255) 0%, rgb(29, 143, 225) 48%, rgb(85, 76, 243) 100%);
+    background: linear-gradient(-225deg, rgb(255 250 34) 0%, rgb(237 177 42) 48%, rgb(231 112 40) 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,7 @@
     transform: translateY(100px);
 }
 .cardPro:hover .cara.cara1{
-    background:linear-gradient(-225deg, rgb(98, 91, 235) 0%, rgb(29, 143, 225) 48%, rgb(34, 225, 255) 100%);
+    background:linear-gradient(-225deg, rgb(255 250 34) 0%, rgb(237 177 42) 48%, rgb(231 112 40) 100%);
     transform: translateY(0);
 }
 
