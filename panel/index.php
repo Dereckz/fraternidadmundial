@@ -214,6 +214,7 @@
 
                             <td><?php echo $dataArticulo['Fecha']; ?></td>
                             <td><?php echo $dataArticulo['Descripcion']; ?></td>
+                            <td><?php echo $dataArticulo['fkiIdCategoria']; ?></td>
                             <td><?php echo $dataArticulo['Imagen']; ?></td>
                             <td><?php echo $dataArticulo['usuario']; ?></td>
                             <?php if($dataArticulo['iEstatus']==1) {?> 

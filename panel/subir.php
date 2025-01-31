@@ -8,9 +8,10 @@ $pathImage = $_POST["pathImagenFile"];
 $usuario= $_POST["usuario"];
 
 	if ($_FILES['patharticulo']['error'] == 0) { //Valida si no hay errores
-		$dir = "files/"; //Directorio de carga
+		$dir = "../articulos/"; //Directorio de carga
+		$dirI = "../filesI/"; //Directorio de carga
 		$tamanio = 40000; //Tamaño permitido en kb
-		$permitidos = array('pdf', 'jpge', 'png'); //Archivos permitido
+		$permitidos = array('pdf'); //Archivos permitido
 		$ruta_carga = $dir . $_FILES['patharticulo']['name'];
 		//Obtenemos la extensión del archivo
 		$arregloArchivo = explode(".", $_FILES['patharticulo']['name']);
@@ -24,11 +25,22 @@ $usuario= $_POST["usuario"];
 				if (!file_exists($dir)) {
 					mkdir($dir, 0777);
 				}
-				
+
+				if ($_FILES['pathImagenFile']['error'] == 0) { 
+						$permitidosI = array('pnd', 'jpg'); //Archivos permitido
+						$ruta_cargaI = $dirI . $_FILES['pathImagenFile']['name'];
+						$arregloImg = explode(".", $_FILES['pathImagenFile']['name']);
+						$extensionI = strtolower(end($arregloImg));
+						if (in_array($extensionI, $permitidosI)) {
+							if (move_uploaded_file($_FILES['pathImagenFile']['tmp_name'], $ruta_cargaI)) {
+								echo "Se subio bien";
+							}			
+						}	
+					}
 				if (move_uploaded_file($_FILES['patharticulo']['tmp_name'], $ruta_carga)) {
 
-					$queryA = mysqli_query($conn,"INSERT INTO `articulo`(`idArticulo`, `Nombre`, `Fecha`, `Descripcion`, `Imagen`, `fkiIdCategoria`, `usuario`, `iEstatus`) 
-					 												VALUES ('0','$nombreA','$fechaS','$descripcion','$pathImage','1','$usuario','1')");
+					$queryA = mysqli_query($conn,"INSERT INTO `articulo`(`idArticulo`, `Nombre`, `Fecha`, `Descripcion`, `rutaA`, `Imagen`, `fkiIdCategoria`, `usuario`, `iEstatus`)  
+					 												VALUES ('0','$nombreA','$fechaS','$descripcion','$ruta_carga','$ruta_cargaI','1','$usuario','1')");
                         if($queryA){
 							header("Location:../panel/index.php");
 						}else{
