@@ -49,12 +49,12 @@ if ($stmt->num_rows > 0) {
            $tipo=$fila['fkidTipoUsuario']; */
     }else
     {
-        header('Location: index.html');
+        header('Location: ../index.html');
     }
 }else {
 
     // usuario incorrecto
-    header('Location: index.html');
+    header('Location: ../index.html');
 }
 //$stmt->close();
 
