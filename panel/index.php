@@ -189,6 +189,7 @@
                         <th>Descripción</th>
                         <th>Categoria</th>
                         <th>Imagen</th>
+                        <th>Usuario</th>
                         <th>Estatus</th>
                         <th>Acciones</th>
                       </tr>
@@ -200,6 +201,7 @@
                         <th>Descripción</th>
                         <th>Categoria</th>
                         <th>Imagen</th>
+                        <th>Usuario</th>
                         <th>Estatus</th>
                         <th>Acciones</th>
                       </tr>
@@ -211,11 +213,19 @@
                      <tr>
                           
                             <td><?php echo strtoupper($dataArticulo['Nombre']); ?></td>
-
                             <td><?php echo $dataArticulo['Fecha']; ?></td>
                             <td><?php echo $dataArticulo['Descripcion']; ?></td>
-                            <td><?php echo $dataArticulo['fkiIdCategoria']; ?></td>
-                            <td><?php echo $dataArticulo['Imagen']; ?></td>
+                            <?php if($dataArticulo['fkiIdCategoria']==1) {?> 
+                              <td>Teología</td>
+                            <?php }?> 
+                            <?php if($dataArticulo['fkiIdCategoria']==2) {?> 
+                              <td>Filosofía</td>
+                            <?php }?>
+                            <?php if($dataArticulo['fkiIdCategoria']==3) {?> 
+                              <td>Historia</td>
+                            <?php }?>
+                            
+                            <td><img src="<?php echo $dataArticulo['Imagen']; ?>" alt="ImagenA" width="100" height="100"> </td>
                             <td><?php echo $dataArticulo['usuario']; ?></td>
                             <?php if($dataArticulo['iEstatus']==1) {?> 
                               <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=1">Activo<a></span></td> 
@@ -227,12 +237,12 @@
                               <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataArticulo['idArticulo']; ?>">
                                   Eliminar
                                 </button>  -->
-                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataArticulo['idArticulo']; ?>">
+                               <!--  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editChildresn<?php echo $dataArticulo['idArticulo']; ?>">
                                   Modificar
                                 </button> 
                                 <button type="button" class="btn btn-warning" data-toggle="modal"  data-target="#cursomodal<?php echo $dataArticulo['idArticulo']; ?>">
                                   Agregar Curso
-                                </button> 
+                                </button>  -->
                               
                           </td> 
                         </tr>
