@@ -224,7 +224,9 @@
                             <?php if($dataArticulo['fkiIdCategoria']==3) {?> 
                               <td>Historia</td>
                             <?php }?>
-                            
+                            <?php if($dataArticulo['fkiIdCategoria']==0) {?> 
+                              <td>NA</td>
+                            <?php }?>
                             <td><img src="<?php echo $dataArticulo['Imagen']; ?>" alt="ImagenA" width="100" height="100"> </td>
                             <td><?php echo $dataArticulo['usuario']; ?></td>
                             <?php if($dataArticulo['iEstatus']==1) {?> 
@@ -266,11 +268,11 @@
 
           <!-- Documentation Link -->
           <div class="row">
-            <div class="col-lg-12">
+           <!--  <div class="col-lg-12">
               <p>DataTables is a third party plugin that is used to generate the demo table below. For more information
                 about DataTables, please visit the official <a href="https://datatables.net/" target="_blank">DataTables
                   documentation.</a></p>
-            </div>
+            </div> -->
           </div>
 
           <!-- Modal Logout -->
@@ -285,11 +287,11 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Are you sure you want to logout?</p>
+                  <p>¿Estas seguro que deseas salir?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
+                  <a href="login.html" class="btn btn-primary">Cerrar Sesión</a>
                 </div>
               </div>
             </div>
@@ -304,7 +306,7 @@
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>copyright &copy; <script> document.write(new Date().getFullYear()); </script> - developed by
-              <b><a href="https://indrijunanda.gitlab.io/" target="_blank">indrijunanda</a></b>
+              <b><a href="https://desetecnologias.net/" target="_blank">Dese Tecnologías</a></b>
             </span>
           </div>
         </div>

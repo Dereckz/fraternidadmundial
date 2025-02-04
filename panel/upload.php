@@ -32,6 +32,13 @@
   <link href="vendor/clock-picker/clockpicker.css" rel="stylesheet">
  
 </head>
+<style>
+  select {
+  font-size: 0.9rem;
+  padding: 2px 15px;
+}
+
+</style>
 
 <body id="page-top">
   <div id="wrapper">
@@ -146,8 +153,8 @@
                       </div>
                       <div class="card-body">
                       <form action="subir.php" name="fsub" id="fsub"method="post" enctype="multipart/form-data">
-                      <input type="text" name="destinatario" value="<?php echo  $_SESSION["id"] ?>">
-                      <input type="text" name="destinatario" value="<?php echo  $_SESSION["usuario"] ?>">
+                      <input type="text" name="id" id="id" value="<?php echo  $_SESSION["id"] ?>" hidden="true">
+                      <input type="text" name="usuario" id="usuario" value="<?php echo  $_SESSION["usuario"] ?>" hidden="true">
                       <div class="form-group">
                             <label for="exampleInputEmail1">Nombre Artículo</label>
                             <input type="text" class="form-control" id="namearticulo" name="namearticulo" aria-describedby="emailHelp"
@@ -162,6 +169,22 @@
                               <label class="custom-file-label" for="lblpatharticulo" name="lblpatharticulo">Agregar Artículo</label>
                             </div>
                           </div>
+                          <div class="form-group">
+                          <label for="categ">Escoge la categoria:</label>
+
+                              <select name="cate" id="cate">
+                              <?php
+                                        $dataempresa = mysqli_query($conn,"SELECT * FROM categoria");
+                                        while ($empresa = mysqli_fetch_array($dataempresa)) { 
+                                
+                                          $array=array($empresa['idCategoria']=>$empresa['Nombre']);
+                                          echo '  <option value="'.$empresa['idCategoria'].'">'.$empresa['Nombre'].'</option>';
+                                          
+                                        }
+                                    ?>
+                             
+                              </select>
+                            </div>
                           <div class="form-group" id="simple-date1">
                           <label for="simpleDataInput">Fecha de artículo</label>
                             <div class="input-group date">
@@ -194,13 +217,13 @@
           <!--Row-->
 
           <!-- Documentation Link -->
-          <div class="row">
+         <!--  <div class="row">
             <div class="col-lg-12">
               <p>DataTables is a third party plugin that is used to generate the demo table below. For more information
                 about DataTables, please visit the official <a href="https://datatables.net/" target="_blank">DataTables
                   documentation.</a></p>
             </div>
-          </div>
+          </div> -->
 
           <!-- Modal Logout -->
           <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelLogout"
@@ -214,11 +237,11 @@
                   </button>
                 </div>
                 <div class="modal-body">
-                  <p>Are you sure you want to logout?</p>
+                  <p>¿Estas seguro que deseas salir?</p>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Logout</a>
+                  <a href="login.html" class="btn btn-primary">Cerrar Sesión</a>
                 </div>
               </div>
             </div>
