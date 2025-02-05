@@ -3,10 +3,12 @@ require("../PHP/conexion.php");
 $nombreA =$_POST["namearticulo"];
 $pathA = $_POST["patharticulo"];
 $fechaS =$_POST["simpleDataInput"];
+$fechaS2=date("Y-m-d", timestamp: strtotime($fechaS));
 $descripcion = $_POST["txtDescripcion"];
 $pathImage = $_POST["pathImagenFile"];
 $usuario= $_POST["usuario"];
-$idcategoria=$_POST["cate"];
+$idcategoria=$_POST["comuna"];
+
 
 	if ($_FILES['patharticulo']['error'] == 0) { //Valida si no hay errores
 		$dir = "../articulos/"; //Directorio de carga
@@ -32,7 +34,7 @@ $idcategoria=$_POST["cate"];
 				}
 				if (move_uploaded_file($_FILES['patharticulo']['tmp_name'], $ruta_carga)) {
 					//-----------------------imagenes beggin
-					$permitidosI = array('png', 'jpg','jpge'); //Archivos permitido
+					$permitidosI = array('png', 'jpg','jpeg'); //Archivos permitido
 					$ruta_cargaI = $dirI . $_FILES['pathImagenFile']['name'];
 					$arregloImg = explode(".", $_FILES['pathImagenFile']['name']);
 					$extensionI = strtolower(end($arregloImg));
@@ -46,7 +48,7 @@ $idcategoria=$_POST["cate"];
 											if (move_uploaded_file($_FILES['pathImagenFile']['tmp_name'], $ruta_cargaI)) {
 												
 												$queryA = mysqli_query($conn,"INSERT INTO `articulo`(`idArticulo`, `Nombre`, `Fecha`, `Descripcion`, `rutaA`, `Imagen`, `fkiIdCategoria`, `usuario`, `iEstatus`)  
-												VALUES ('0','$nombreA','$fechaS','$descripcion','$ruta_carga','$ruta_cargaI','$idCategoria','$usuario','1')");
+												VALUES ('0','$nombreA','$fechaS2','$descripcion','$ruta_carga','$ruta_cargaI','$idCategoria','$usuario','1')");
 													if($queryA){
 														header("Location:../panel/index.php");
 													}else{
@@ -79,6 +81,7 @@ $idcategoria=$_POST["cate"];
 			} else {
 			echo "Archivo no permitido";
 		}
-		} else {
+	} else {
 		echo "No enviaste archivo";
 	}
+ 

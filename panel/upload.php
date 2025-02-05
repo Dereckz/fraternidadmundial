@@ -160,7 +160,18 @@
                             <input type="text" class="form-control" id="namearticulo" name="namearticulo" aria-describedby="emailHelp"
                               placeholder="Teclea el nombre">
                           
-                          </div>
+                        </div>
+                        <select name="comuna" class="form-control">
+                            <?php
+                                            $dataempresa = mysqli_query($conn,"SELECT * FROM categoria");
+                                            while ($empresa = mysqli_fetch_array($dataempresa)) { 
+                                    
+                                              $array=array($empresa['idCategoria']=>$empresa['Nombre']);
+                                              echo '<option value="'.$empresa['idCategoria'].'">'.$empresa['Nombre'].'</option>';
+                                              
+                                            }
+                                        ?>
+                                      </select>
                         <!--  <input type="file" id="file-uploader" multiple /> -->
                           <div class="form-group">
                           <label for="simpleDataInput">Seleccione su Archivo</label>
@@ -169,22 +180,7 @@
                               <label class="custom-file-label" for="lblpatharticulo" name="lblpatharticulo">Agregar Artículo</label>
                             </div>
                           </div>
-                          <div class="form-group">
-                          <label for="categ">Escoge la categoria:</label>
-
-                              <select name="cate" id="cate">
-                              <?php
-                                        $dataempresa = mysqli_query($conn,"SELECT * FROM categoria");
-                                        while ($empresa = mysqli_fetch_array($dataempresa)) { 
-                                
-                                          $array=array($empresa['idCategoria']=>$empresa['Nombre']);
-                                          echo '  <option value="'.$empresa['idCategoria'].'">'.$empresa['Nombre'].'</option>';
-                                          
-                                        }
-                                    ?>
-                             
-                              </select>
-                            </div>
+                       
                           <div class="form-group" id="simple-date1">
                           <label for="simpleDataInput">Fecha de artículo</label>
                             <div class="input-group date">
@@ -194,7 +190,7 @@
                               <input type="text" class="form-control" value="<?php echo date("d/m/Y");?>" id="simpleDataInput" name="simpleDataInput">
                             </div>
                           </div>
-                        
+                          
                         <div class="form-group">
                             <label for="exampleFormControlTextarea1">Descripción</label>
                             <textarea class="form-control" id="txtDescripcion" name="txtDescripcion"rows="3"></textarea>
@@ -206,6 +202,7 @@
                             </div>
                           </div>
                       
+                          
                           <button type="submit" class="btn btn-primary">Subir Archivo</button>
                         </form>
                       </div>
