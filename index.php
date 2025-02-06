@@ -23,6 +23,12 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!----------------------------------------------------->
+    <style type="text/css">
+        .centered {
+            margin-left:auto;
+            margin-right:auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -96,7 +102,7 @@
         </div>
         <button type="button" id="whats-openPopup" class="whatsapp-button" aria-label="whattsapp">
                <div class="float" >
- <i class="fa fa-whatsapp my-float"></i></div>
+            <i class="fa fa-whatsapp my-float"></i></div>
            </button>
         <div class="circle-anime"></div>
     </div>
@@ -286,167 +292,51 @@
         <!--PROFESIONALES CARD-->
 
         <div class="container gap-5">
-            <center>
+            <div class="centered">
                 <div class="row">
                     <!--------------------------------- CARD PRO MODAL CV --------------------------------->
+                    <?php require("PHP/conexion.php"); ?>
+                    <?php
+                        $sqlArticulo  = ("SELECT * FROM articulo 
+                                        where iEstatus=1; ");
+                        $queryArticulo = mysqli_query($conn, $sqlArticulo);
+                        $cantidad     = mysqli_num_rows($queryArticulo);
+                        $articulosonline= array();
+                    ?>
                     <div class="col-md-4">
+                    <?php
+                        while ($dataArticulo = mysqli_fetch_array($queryArticulo)) { ?>
+
                         <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="100">
                             <div class="cara cara1">
                                 <div class="content">
                                     <img src="Img/fra2.png" alt="secretary_img">
-                                    <h1 id="p">Artículo</h1>
+                                    <h1 id="p"><?php echo strtoupper($dataArticulo['Nombre']); ?></h1>
                                 </div>
                             </div>
                             <div class="cara cara2">
                                 <div class="content">
-                                    <h1 id="size_name">Nombre Apellido</h1>
-                                    <p>Especialidado en "tratamiento"</p>
+                                    <h1 id="size_name"></h1>
+                                    <p><?php echo strtoupper($dataArticulo['Descripcion']); ?></p>
                                     <div>
-                                        <img src="Img/Logo.png" style="width: 100px;" alt="logo">
+                                        <img src="<?php echo str_replace('../',' ',$dataArticulo['Imagen']); ?>" style="width: 100px;" alt="imgAr">
                                     </div>
                                     <div>
                                         <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
-                                                 Ver Curriculum Vitae
+                                                Articulo
                                               </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        <?php  }?>
                     </div>
                     <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
-                    <!--------------------------------- CARD PRO MODAL CV --------------------------------->
-                    <div class="col-md-4">
-                        <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="200">
-                            <div class="cara cara1">
-                                <div class="content">
-                                    <img src="Img/fra2.png" alt="secretary">
-                                    <h1 id="p">Artículo</h1>
-                                </div>
-                            </div>
-                            <div class="cara cara2">
-                                <div class="content">
-                                    <h1 id="size_name">Nombre Apellido</h1>
-                                    <p>Especialidado en "tratamiento"</p>
-                                    <div>
-                                        <img src="Img/Logo.png" style="width: 100px;" alt="logo">
-                                    </div>
-                                    <div>
-                                        <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
-                                          Ver Curriculum Vitae
-                                       </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
-                    <!--------------------------------- CARD PRO MODAL CV --------------------------------->
-                    <div class="col-md-4">
-                        <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="300">
-                            <div class="cara cara1">
-                                <div class="content">
-                                    <img src="Img/fra2.png" alt="secretary_img">
-                                    <h1 id="p">Artículo</h1>
-                                </div>
-                            </div>
-                            <div class="cara cara2">
-                                <div class="content">
-                                    <h1 id="size_name">Nombre Apellido</h1>
-                                    <p>Especialidado en "tratamiento"</p>
-                                    <div>
-                                        <img src="Img/Logo.png" style="width: 100px;" alt="logo">
-                                    </div>
-                                    <div>
-                                        <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
-                                                  Ver Curriculum Vitae
-                                               </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
-                    <!--------------------------------- CARD PRO MODAL CV --------------------------------->
-                    <div class="col-md-4">
-                        <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="300">
-                            <div class="cara cara1">
-                                <div class="content">
-                                    <img src="Img/fra2.png" alt="secretaty_img">
-                                    <h1 id="p">Artículo</h1>
-                                </div>
-                            </div>
-                            <div class="cara cara2">
-                                <div class="content">
-                                    <h1 id="size_name">Nombre Apellido</h1>
-                                    <p>Especialidado en "tratamiento"</p>
-                                    <div>
-                                        <img src="Img/Logo.png" style="width: 100px;" alt="logo">
-                                    </div>
-                                    <div>
-                                        <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
-                                                  Ver Curriculum Vitae
-                                               </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
-                    <!--------------------------------- CARD PRO MODAL CV --------------------------------->
-                    <div class="col-md-4">
-                        <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="200">
-                            <div class="cara cara1">
-                                <div class="content">
-                                    <img src="Img/fra2.png" alt="secretaty_img">
-                                    <h1 id="p">Artículo</h1>
-                                </div>
-                            </div>
-                            <div class="cara cara2">
-                                <div class="content">
-                                    <h1 id="size_name">Nombre Apellido</h1>
-                                    <p>Especialidado en "tratamiento"</p>
-                                    <div>
-                                        <img src="Img/Logo.png" style="width: 100px;" alt="logo">
-                                    </div>
-                                    <div>
-                                        <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
-                                                  Ver Curriculum Vitae
-                                               </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
-                    <!--------------------------------- CARD PRO MODAL CV --------------------------------->
-                    <div class="col-md-4">
-                        <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="100">
-                            <div class="cara cara1">
-                                <div class="content">
-                                    <img src="Img/fra2.png" alt="secretaty_img">
-                                    <h1 id="p">Artículo</h1>
-                                </div>
-                            </div>
-                            <div class="cara cara2">
-                                <div class="content">
-                                    <h1 id="size_name">Nombre Apellido</h1>
-                                    <p>Especialidado en "tratamiento"</p>
-                                    <div>
-                                        <img src="Img/Logo.png" style="width: 100px;" alt="logo">
-                                    </div>
-                                    <div>
-                                        <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
-                                                  Ver Curriculum Vitae
-                                               </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
+                   
                 </div>
 
-            </center>
+            </div>
             <p style="margin-top:40px;"></p>
         </div>
 
@@ -591,7 +481,7 @@
 
                     <!-- REDES SOCIALES column -->
                     <div class="col-md-12 col-lg-2 col-xxl-3 ">
-                        <center>
+                    <div class="centered">
                             <h1 class="text-uppercase font-weight-bold" id="size_persona">¡Seguinos!</h1>
                             <div class="col-lg ">
                                 <!-- Facebook -->
@@ -601,7 +491,7 @@
                                 <!-- Wsp -->
                                 <a class="btn btn-primary btn-floating m-1" style="background-color: #2fca00  ; border-radius: 50%;" href="https://api.whatsapp.com/send?phone=5491165879270" target="_blank" role="button"><i class="bi bi-whatsapp"></i></a>
                             </div>
-                        </center>
+                        </div>
                     </div>
                 </div>
                 <!--Grid row-->

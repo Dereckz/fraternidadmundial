@@ -9,7 +9,7 @@ $pathImage = $_POST["pathImagenFile"];
 $usuario= $_POST["usuario"];
 $idcategoria=$_POST["comuna"];
 
-
+echo $idcategoria;
 	if ($_FILES['patharticulo']['error'] == 0) { //Valida si no hay errores
 		$dir = "../articulos/"; //Directorio de carga
 		$dirI = "../filesI/"; //Directorio de carga
