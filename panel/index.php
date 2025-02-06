@@ -191,7 +191,7 @@
                         <th>Imagen</th>
                         <th>Usuario</th>
                         <th>Estatus</th>
-                        <th>Acciones</th>
+                       <!--  <th>Acciones</th> -->
                       </tr>
                     </thead>
                     <tfoot>
@@ -203,7 +203,7 @@
                         <th>Imagen</th>
                         <th>Usuario</th>
                         <th>Estatus</th>
-                        <th>Acciones</th>
+                   <!--      <th>Acciones</th> -->
                       </tr>
                     </tfoot>
                     <tbody>

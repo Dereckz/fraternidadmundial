@@ -162,6 +162,7 @@
                           
                         </div>
                         <select name="comuna" class="form-control">
+                          <option value="Selecciona">Selecciona</option>
                             <?php
                                             $dataempresa = mysqli_query($conn,"SELECT * FROM categoria");
                                             while ($empresa = mysqli_fetch_array($dataempresa)) { 
