@@ -293,7 +293,7 @@
 
         <div class="container gap-5">
             <div class="centered">
-                <div class="row">
+                <div class="row" style="--bs-gutter-x: -3.7rem;">
                     <!--------------------------------- CARD PRO MODAL CV --------------------------------->
                     <?php require("PHP/conexion.php"); ?>
                     <?php
@@ -303,11 +303,11 @@
                         $cantidad     = mysqli_num_rows($queryArticulo);
                         $articulosonline= array();
                     ?>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="display: contents">
                     <?php
                         while ($dataArticulo = mysqli_fetch_array($queryArticulo)) { ?>
 
-                        <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="100">
+                        <div class="cardPro" data-aos="zoom-in-up" data-aos-delay="100" style="transform: translateZ(0) scale(0.95);">
                             <div class="cara cara1">
                                 <div class="content">
                                     <img src="Img/fra2.png" alt="secretary_img">
