@@ -322,14 +322,18 @@
                                         <img src="<?php echo str_replace('../',' ',$dataArticulo['Imagen']); ?>" style="width: 100px;" alt="imgAr">
                                     </div>
                                     <div>
-                                        <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cursomodal<?php echo $dataArticulo['idArticulo']; ?>">
+                                            Artículo
+                                        </button>
+                                       <!--  <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
                                                 Articulo
-                                              </a>
+                                              </a> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+                        <!--Ventana Modal para Actualizar--->
+                        <?php include('modalarticulo.php'); ?>
                         <?php  }?>
                     </div>
                     <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
