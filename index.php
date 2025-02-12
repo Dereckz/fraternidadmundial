@@ -293,7 +293,7 @@
 
         <div class="container gap-5">
             <div class="centered">
-                <div class="row" style="--bs-gutter-x: -3.7rem;">
+                <div class="row" style="--bs-gutter-x: -1rem;">
                     <!--------------------------------- CARD PRO MODAL CV --------------------------------->
                     <?php require("PHP/conexion.php"); ?>
                     <?php
