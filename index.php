@@ -322,19 +322,17 @@
                                         <img src="<?php echo str_replace('../',' ',$dataArticulo['Imagen']); ?>" style="width: 100px;" alt="imgAr">
                                     </div>
                                     <div>
-                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cursomodal<?php echo $dataArticulo['idArticulo']; ?>">
-                                            Artículo
-                                        </button>
-                                       <!--  <a type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalPersona1">
-                                                Articulo
-                                              </a> -->
+                                    <button onclick="openModelPDF('<?php echo $dataArticulo['rutaA']; ?>')" class="btn btn-primary" type="button">Ver Archivo Modal</button>
+                                    <a class="btn btn-primary" target="_black" href="<?php echo 'http://localhost/fraternidadmundial.com'.$dataArticulo['rutaA']; ?>" >Ver Archivo pagina</a>
+                                     
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!--Ventana Modal para Actualizar--->
-                        <?php include('modalarticulo.php'); ?>
+                        <!--Ventana Modal para Agregar--->
+                        <?php include('ModalAgregar.php'); ?>
                         <?php  }?>
+                       
                     </div>
                     <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
                    
@@ -349,10 +347,10 @@
         <!--NUESTRA SUCURSAL-->
 
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave1" preserveAspectRatio="none">
-  <path fill="#fff" fill-opacity="1" d="M0,160L80,170.7C160,181,320,203,480,181.3C640,160,800,96,960,80C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
-</svg>
+            <path fill="#fff" fill-opacity="1" d="M0,160L80,170.7C160,181,320,203,480,181.3C640,160,800,96,960,80C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+        </svg>
 
-        <!--
+      
         <div class="banner-image5 w-100 vh-100 d-flex justify-content-center align-items-center" Id="Contactos">
 
             <div class="content text-center">
@@ -425,15 +423,16 @@
         </div>
         -->
 
-    </div>
+     </div>
     </div>
 
-    </div>
+     </div>
+
     </div>
     <br>
 
     <!--FOOTER-->
-    <!-- Footer -->
+    
     <footer class="text-center text-lg-start text-white">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave2" preserveAspectRatio="none"> 
     <path fill="rgb(255, 255, 255)" fill-opacity="1" d="M0,256L80,218.7C160,181,320,107,480,112C640,117,800,203,960,224C1120,245,1280,203,1360,181.3L1440,160L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z" ></path>
@@ -525,8 +524,17 @@
 <script src="Bootstrap/js/bootstrap.min.js"></script>
 <!----------------------------------------------------->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+        
 <script>
     AOS.init();
+
+        function openModelPDF(url) {
+                $('#modalPdf').modal('show');
+                $('#iframePDF').attr('src','<?php echo 'http://localhost/fraternidadmundial.com/'; ?>'+url);
+            }
 </script>
 
 </html>
