@@ -332,28 +332,7 @@
                         
                         
                         <?php  }?>
-                        <!-- Modal-->
-                        <div class="modal fade" id="modalPdf" tabindex="-1" aria-labelledby="modalPdf" aria-hidden="true">
-                            <div class="modal-dialog modal-lg">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Ver archivo</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <iframe id="iframePDF" frameborder="0" scrolling="no" width="100%" height="500px"></iframe>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- fin modal -->
-                    </div>
+                      
                     <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
                    
                 </div>
@@ -525,12 +504,14 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
-            © 2021 Copyright:
+            © 2025 Copyright:
             <a class="text-white" href="https://mdbootstrap.com/">Desse Tecnologías</a>
         </div>
         <!-- Copyright -->
     </footer>
     <!--FIN FOOTER-->
+     
+</div>
 </body>
 <!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -597,4 +578,26 @@
         </div>
     </div>
 </div>
+
+ <!-- Modal-->
+            <div class="modal fade" id="modalPdf" tabindex="-1" aria-labelledby="modalPdf" aria-hidden="true">
+                            <div class="modal-dialog modal-lg">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Ver archivo</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe id="iframePDF" frameborder="0" scrolling="no" width="100%" height="800px"></iframe>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                                    </div>
+                                </div>
+                            </div>
+    </div>
+                        <!-- fin modal -->
 <!--FIN DE MODAL-->
