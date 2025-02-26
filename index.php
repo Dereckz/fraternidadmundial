@@ -141,14 +141,12 @@
                     <center>
                         <h1 style="margin-top:15px;">¡BIENVENIDO!</h1>
                         <p>
-                            En nuestra página web podrá ver los tratamientos que hacemos en el Consultorio Especializado en Cirugía y Traumatología, los profesionales que atienden, y enterarse de las actividades que realizamos.
+                        Bienvenido a nuestra página, un sitio donde encontrarás artículos interesantes sobre Filosofía, Teología e Historia. Exploramos ideas que han moldeado el pensamiento humano, reflexionamos sobre cuestiones trascendentales y analizamos los eventos que han dado forma a nuestra sociedad.
                         </p>
 
                         <h2>¿Quiénes somos?</h2>
                         <p>
-                            Somos una clínica que busca ser un referente en calidad en atención odontológica, caracterizándonos por responder a la confianza de nuestros pacientes en base a la ética, el profesionalismo y la alta tecnología. Nuestra misión es entregar soluciones efectivas,
-                            cumpliendo las expectativas de salud oral de cada paciente con la más alta calidad de servicio. Queremos generar en nuestros pacientes bienestar físico y emocional en un entorno agradable, mejorando de forma permanente su calidad
-                            de vida.
+                            Somos un espacio donde encontraras consejos, reflexiones y meditaciones con un enfoque positivo, diseñados para inspirar, motivar y brindar claridad. Pequeñas dosis de sabiduría que nunca están de más, porque siempre hay algo nuevo que aprender y una nueva perspectiva por descubrir.
                         </p>
                     </center>
                 </div>
@@ -350,17 +348,19 @@
         </svg>
 
       
-        <div class="banner-image5 w-100 vh-100 d-flex justify-content-center align-items-center" Id="Contactos">
+        
+        <!--<div class="banner-image5 w-100 vh-100 d-flex justify-content-center align-items-center" Id="Contactos">
 
             <div class="content text-center">
                 <h1 class="text-white" style="font-size: 3rem;">Nuestra Sucursal</h1>
             </div>
 
-        </div>
-        <svg class="wave4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
+        </div>-->
+        <!--<svg class="wave4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
             <path fill="#fff" fill-opacity="1" d="M0,96L80,122.7C160,149,320,203,480,197.3C640,192,800,128,960,117.3C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-          </svg>
-        <div class="container  d-grid gap-5" style="margin-top: 50px">
+          </svg>-->
+        
+        <!--  <div class="container  d-grid gap-5" style="margin-top: 50px">
 
             <div class="row">
 
@@ -419,8 +419,7 @@
 
                 </div>
             </div>
-        </div>
-        -->
+        </div>-->
 
      </div>
     </div>
