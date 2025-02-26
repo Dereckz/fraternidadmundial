@@ -1,12 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-    
+<script type="text/javascript">
+window.onload=function(){
+	Objeto=document.getElementsByTagName("a");
+	for(a=0;a<Objeto.length;a++){
+		Objeto[a].onclick=function(){
+			location.replace(this.href);
+			return false;
+		}
+	}
+}
+</script>
 <?php session_start() ?>
 <?php 
-
+	if(!isset($_SESSION['id'])){
+    header('location:../login.php');
+  }
+  
   require("../php/conexion.php");
+?> 
 
-?>
 
 <head>
   <meta charset="utf-8">
@@ -291,7 +304,7 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-dismiss="modal">Cancel</button>
-                  <a href="login.html" class="btn btn-primary">Cerrar Sesión</a>
+                  <a href="login.php" class="btn btn-primary">Cerrar Sesión</a>
                 </div>
               </div>
             </div>
