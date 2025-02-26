@@ -26,7 +26,7 @@
   <div id="wrapper">
     <!-- Sidebar -->
     <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
-      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+      <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.php">
         <div class="sidebar-brand-icon">
           <img src="img/logo/fmsinlogan.png">
         </div>
@@ -133,14 +133,14 @@
                 <span class="ml-2 d-none d-lg-inline text-white small">Administrador</span>
               </a>
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="#">
+              <!--   <a class="dropdown-item" href="#">
                   <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                   Perfil
-                </a>
-                <a class="dropdown-item" href="#">
+                </a> -->
+               <!--  <a class="dropdown-item" href="#">
                   <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
                   Ajustes
-                </a>
+                </a> -->
                 <!-- <a class="dropdown-item" href="#">
                   <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                   Activity Log
@@ -230,10 +230,10 @@
                             <td><img src="<?php echo $dataArticulo['Imagen']; ?>" alt="ImagenA" width="100" height="100"> </td>
                             <td><?php echo $dataArticulo['usuario']; ?></td>
                             <?php if($dataArticulo['iEstatus']==1) {?> 
-                              <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=1">Activo<a></span></td> 
+                              <td style="padding-left: 20px;"><span  class="badge badge-success" > <a class="text-white" href="#">Activo<a></span></td> 
                             <?php }?> 
                             <?php if($dataArticulo['iEstatus']==0) {?> 
-                              <td><span  class="badge badge-danger"><a class="text-white" href="func/updatestatus.php?id='<?php echo $dataArticulo['idArticulo']; ?>'&status=0">Inactivo</a></span></td> 
+                              <td><span  class="badge badge-danger"><a class="text-white" href="#">Inactivo</a></span></td> 
                             <?php }?>
                             <td>
                               <!--<button type="button" class="btn btn-danger" data-toggle="modal" data-target="#deleteChildresn<?php echo $dataArticulo['idArticulo']; ?>">
