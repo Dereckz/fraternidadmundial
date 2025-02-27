@@ -32,48 +32,9 @@
 </head>
 
 <body>
-    <!--
-    <!.--Navbar--.>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-light rara sombraB" id="EpicNavbar">
 
-        <a class="navbar-brand d-lg-none" href="#">
-            <img src="Img/Logo.png" style="width: 100px; margin-left: 2rem;" alt="logo">
-        </a>
-        <!.--boton de nav--.>
-
-        <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#navbar" disabled aria-controls="myNavbarToggler7" aria-expanded="false" aria-label="Toggle navigation" style="margin-right: 2.5rem; border: transparent;">
-                <input type="checkbox" id="btn-menu" >
-                <label for="btn-menu" class="lbl-menu" style="margin-right: 2rem; box-shadow: none;" >
-                    <span id="spn1"></span>
-                    <span id="spn2"></span>
-                    <span id="spn3"></span>
-                </label>
-            </button>
-        </div>
-        <!.------------------------.>
-        <div class="collapse navbar-collapse underlineEffects navbar-nav mx-auto" id="navbar">
-
-            <ul class="navbar-nav mx-auto">
-                <ul>
-                    <li class="nav-item">
-                        <a class="" href="index.html">Inicio</a>
-                    </li>
-                   <!.--  <li class="nav-item">
-                        <a href="vistas/Tratamientos/tratamientos.html">Tratamientos</a>
-                    </li> -->
-                    <!-- <a class="d-none d-lg-block" href="#"><img src="Img/Logo.png" style="width: 150px;" alt="logo"></a>-->
-                     <!-- <li class="nav-item">
-                        <a href="vistas/Turnos/turnos.html">Turnos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="vistas/Contacto/contactos.html  ">Contactos</a>
-                    </li> --.>
-                </ul>
-            </ul>
-
-        </div>
-    </nav> -->
+    
     <!--BOTON DE WSP-->
     <div class="nav-bottom">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -157,82 +118,12 @@
                 </div>
             </div>
 
-            <!--
-            <div class="wrapper" align="center">
-                <.!--Cuadro TRATAMIENTOS--.>
-                <div class="box" style="margin-top: 15px;" data-aos="zoom-in-up" data-aos-delay="100">
-                    <div class="front-face">
-                        <div class="icon">
-                            <i class="fas fa-tooth"></i>
-                        </div>
-                        <span style="margin-top: 20px;">Tratamientos</span>
-                    </div>
-                    <div class="back-face">
-                        <span>nuestros Tratamientos</span>
-                        <p>
-                            Somos dentistas con dilatada experiencia y en continua formación. Conozca más sobre nuestros tratamientos.
-                        </p>
-                        <a href="vistas/Tratamientos/tratamientos.html" class="btn btn-lg btn-outline-primary sombraB" style="background-color: #00b7ff; color:white">Ir a Tratamientos</a>
-
-                    </div>
-                </div>
-
-                <.!--Cuadro TURNOS--.>
-                <div class="box" style="margin-top: 15px;" data-aos="zoom-in-up" data-aos-delay="200">
-                    <div class="front-face">
-                        <div class="icon">
-                            <i class="fas fa-calendar-check"></i>
-
-                        </div>
-                        <span style="margin-top: 20px;">Turnos</span>
-                    </div>
-                    <div class="back-face">
-                        <span>Pedí un Turno</span>
-                        <p>
-                            Atención de manera personalizada y desarrollo de un plan de tratamiento acorde a tus necesidades. ¿Qué estas esperando? ¡Pedí tu Turno acá!
-
-                        </p>
-                        <a href="vistas/Turnos/turnos.html" class="btn btn-lg btn-outline-primary sombraB" style="background-color: #00b7ff; color:white">Ir a Turnos</a>
-
-
-                    </div>
-                </div>
-                <.!--Cuadro CONTACTOS--.>
-                <div class="box" style="margin-top: 15px;" data-aos="zoom-in-up" data-aos-delay="300">
-                    <div class="front-face">
-                        <div class="icon">
-                            <i class="fas fa-clinic-medical"></i>
-                        </div>
-                        <span style="margin-top: 20px;">Contacto</span>
-                    </div>
-                    <div class="back-face">
-                        <span>Contactanos</span>
-                        <p>
-                            ¿Qué estas esperando? Los mejores profesionales te están esperando para que realices tu primer consulta SIN CARGO.
-                        </p>
-                        <a class="btn btn-lg btn-outline-primary sombraB" href="vistas/Contacto/contactos.html" style="background-color: #00b7ff; color:white">Ir a Contactos</a>
-                    </div>
-                </div>
-            </div>
-            -->
-
         </div>
         <!--FIN DE CUADROS-->
 
         <!--
         <.!--NOVEDADES--.>
-        <div class="container  my-5 d-grid gap-5">
-            <div class="row g-5">
-
-                <div class="col-md-8" style="margin-top: 100px;">
-                    <center>
-                        <h1 data-aos="zoom-in" data-aos-duration="900">Novedades</h1>
-                        <h2 data-aos="zoom-in" data-aos-duration="900" id="p">Conozca lo nuevo de nuestra gama de productos, promociones en tratamienos, avisos que podrian ayudarle a usted. Contamos con una amplia oferta en insumos, equipamiento, indumentaria y mucho más.
-                        </h2>
-                        <img src="Img/img2.png" class="d-block w-100" alt="alt2">
-                    </center>
-                </div>
-
+        
                 <div class="col-md-4" style="margin: auto">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
@@ -274,22 +165,12 @@
 
     <div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0" class="scrollspy-example" tabindex="0" id="Articulos">
 
-        <!--
-        <div class="banner-image2 w-100 vh-100 d-flex justify-content-center align-items-center" id="Tratamientos">
-
-            <div class="content text-center">
-
-                <h1 class="text-white" style="font-size: 3rem;">Nosotros</h1>
-            </div>
-
-        </div>
-        -->
         <svg class="wave3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
           <path fill="#fff" fill-opacity="1" d="M0,96L80,122.7C160,149,320,203,480,197.3C640,192,800,128,960,117.3C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
         </svg>
-        <!--PROFESIONALES CARD-->
+       <!--PROFESIONALES CARD-->
 
-        <div class="container gap-5">
+       <div class="container gap-5">
             <div class="centered">
                 <div class="row" style="--bs-gutter-x: -1rem;">
                     <!--------------------------------- CARD PRO MODAL CV --------------------------------->
@@ -338,7 +219,20 @@
             </div>
             <p style="margin-top:40px;"></p>
         </div>
-
+<!-- Modal 1 CV PERSONA 1 ---------------------------------------------------------------------------------------------------->
+<div class="modal fade" id="ModalPersona1" tabindex="-1" aria-labelledby="ModalPersona1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background: transparent">
+            <div class="modal-header" style="background-image: linear-gradient(-225deg, rgb(85, 76, 243) 0%, rgb(29, 143, 225) 48%, rgb(34, 225, 255) 100%);">
+                <h1 class="modal-title" id="exampleModalLabel" style="color:#fff">Curriculum Vitae</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img class="sombraA4" src="Img/CvA4.webp" style="width: 100%;" alt="cva4">
+            </div>
+        </div>
+    </div>
+</div>
 
         <!--FIN DE CARDS-->
         <!--NUESTRA SUCURSAL-->
@@ -346,80 +240,6 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="wave1" preserveAspectRatio="none">
             <path fill="#fff" fill-opacity="1" d="M0,160L80,170.7C160,181,320,203,480,181.3C640,160,800,96,960,80C1120,64,1280,96,1360,112L1440,128L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
-
-      
-        
-        <!--<div class="banner-image5 w-100 vh-100 d-flex justify-content-center align-items-center" Id="Contactos">
-
-            <div class="content text-center">
-                <h1 class="text-white" style="font-size: 3rem;">Nuestra Sucursal</h1>
-            </div>
-
-        </div>-->
-        <!--<svg class="wave4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none">
-            <path fill="#fff" fill-opacity="1" d="M0,96L80,122.7C160,149,320,203,480,197.3C640,192,800,128,960,117.3C1120,107,1280,149,1360,170.7L1440,192L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"></path>
-          </svg>-->
-        
-        <!--  <div class="container  d-grid gap-5" style="margin-top: 50px">
-
-            <div class="row">
-
-                <center>
-                    <h1 data-aos="zoom-in" data-aos-duration="900">Nuestro Consultorio</h1>
-                </center>
-                <div class="col-md-7" style="margin: auto;">
-                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="Img/IMAGENES/imagen (1).jpg" class="d-block w-100" alt="img1">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Img/IMAGENES/imagen (2).jpg" class="d-block w-100" alt="img2">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Img/IMAGENES/imagen (3).jpg" class="d-block w-100" alt="img3">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Img/IMAGENES/imagen (4).jpg" class="d-block w-100" alt="img4">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Img/IMAGENES/imagen (7).jpg" class="d-block w-100" alt="img7">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Img/IMAGENES/imagen (9).jpg" class="d-block w-100" alt="img9">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Img/IMAGENES/imagen (10).jpg" class="d-block w-100" alt="img10">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Img/IMAGENES/imagen (11).jpg" class="d-block w-100" alt="img11">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                    </div>
-                </div>
-
-
-                <div class="col-md-5">
-                    <center>
-                        <h1 style="margin-top:20px;" data-aos="zoom-in" data-aos-duration="900">Dental Rojas</h1>
-                        <p data-aos="zoom-in" data-aos-duration="900">Cada consultorio está desarrollado y diseñado de acuerdo a su función específica: un consultorio para la atención del paciente pediátrico y un consultorio odontológico. Ambos poseen vistas a espacios verdes con abundante luz natural,
-                            indispensable para las actividades que realizamos. La ambientación de nuestras áreas de espera está pensada para lograr un momento de relax, con iluminación suave, música calma y aromatización delicada del ambiente</p>
-                    </center>
-                    <img src="Img/img3.png" class="d-block w-100" alt="img3">
-                    <center><a class="btn btn-lg btn-outline-primary sombraB" href="vistas/Contacto/contactos.html" style="background-color: #00b7ff; color:white;" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">Visítanos ahora</a></center>
-
-
-                </div>
-            </div>
-        </div>-->
 
      </div>
     </div>
@@ -554,29 +374,14 @@
             }
        </script> 
 <script>
-    AOS.init();
-
-        
+    AOS.init();   
 </script>
 
 </html>
 <!--FIN DE HTML-------------------------------------------------------------->
 
 <!--MODALES-->
-<!-- Modal 1 CV PERSONA 1 ---------------------------------------------------------------------------------------------------->
-<div class="modal fade" id="ModalPersona1" tabindex="-1" aria-labelledby="ModalPersona1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="background: transparent">
-            <div class="modal-header" style="background-image: linear-gradient(-225deg, rgb(85, 76, 243) 0%, rgb(29, 143, 225) 48%, rgb(34, 225, 255) 100%);">
-                <h1 class="modal-title" id="exampleModalLabel" style="color:#fff">Curriculum Vitae</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img class="sombraA4" src="Img/CvA4.webp" style="width: 100%;" alt="cva4">
-            </div>
-        </div>
-    </div>
-</div>
+
 
  <!-- Modal-->
             <div class="modal fade" id="modalPdf" tabindex="-1" aria-labelledby="modalPdf" aria-hidden="true">
