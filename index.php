@@ -28,6 +28,25 @@
             margin-left:auto;
             margin-right:auto;
         }
+        .close {
+            background: #606061;
+            color: #FFFFFF;
+            line-height: 25px;
+            position: absolute;
+            right: -12px;
+            text-align: center;
+            top: -10px;
+            width: 24px;
+            text-decoration: none;
+            font-weight: bold;
+            -webkit-border-radius: 12px;
+            -moz-border-radius: 12px;
+            border-radius: 12px;
+            -moz-box-shadow: 1px 1px 3px #000;
+            -webkit-box-shadow: 1px 1px 3px #000;
+            box-shadow: 1px 1px 3px #000;
+        }
+        .close:hover { background: #00d9ff; }
     </style>
 </head>
 
@@ -121,40 +140,7 @@
         </div>
         <!--FIN DE CUADROS-->
 
-        <!--
-        <.!--NOVEDADES--.>
-        
-                <div class="col-md-4" style="margin: auto">
-                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                        <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <img src="Img/Promo/Promo1.jpg" class="d-block w-100" alt="promo1">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Img/Promo/Promo2.jpg" class="d-block w-100" alt="promo2">
-                            </div>
-                            <div class="carousel-item">
-                                <img src="Img/Promo/Aviso1.jpg" class="d-block w-100" alt="promo3">
-                            </div>
-                        </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        -->
+     
     </div>
     <!--FIN DE BANNER-->
     <!--SEGUNDO BANNER-->
@@ -211,7 +197,27 @@
                         
                         
                         <?php  }?>
-                      
+                       <!-- Modal-->
+            <div class="modal fade" id="modalPdf" tabindex="-1" aria-labelledby="modalPdf" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Ver archivo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <iframe id="iframePDF" frameborder="0" scrolling="no" width="100%" height="800px"></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+
+                                </div>
+                            </div>
+                        </div>
+             </div>
+                        <!-- fin modal -->
                     <!----------------------------------- FIN DE CARD PRO MODAL CV--------------------->
                    
                 </div>
@@ -219,20 +225,7 @@
             </div>
             <p style="margin-top:40px;"></p>
         </div>
-<!-- Modal 1 CV PERSONA 1 ---------------------------------------------------------------------------------------------------->
-<div class="modal fade" id="ModalPersona1" tabindex="-1" aria-labelledby="ModalPersona1" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content" style="background: transparent">
-            <div class="modal-header" style="background-image: linear-gradient(-225deg, rgb(85, 76, 243) 0%, rgb(29, 143, 225) 48%, rgb(34, 225, 255) 100%);">
-                <h1 class="modal-title" id="exampleModalLabel" style="color:#fff">Curriculum Vitae</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img class="sombraA4" src="Img/CvA4.webp" style="width: 100%;" alt="cva4">
-            </div>
-        </div>
-    </div>
-</div>
+
 
         <!--FIN DE CARDS-->
         <!--NUESTRA SUCURSAL-->
@@ -344,6 +337,9 @@
 <script src="Bootstrap/js/bootstrap.min.js"></script>
 <!----------------------------------------------------->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();   
+</script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
@@ -373,9 +369,8 @@
                 $('#iframePDF').attr('src','<?php echo 'http://localhost/fraternidadmundial.com'; ?>'+url);
             }
        </script> 
-<script>
-    AOS.init();   
-</script>
+
+
 
 </html>
 <!--FIN DE HTML-------------------------------------------------------------->
